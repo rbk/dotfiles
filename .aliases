@@ -3,3 +3,14 @@ alias dkill='docker kill $(docker ps -a -q)'
 alias dremove='docker rm $(docker ps -a -q)'
 alias dkill_all='docker rmi $(docker images -f dangling=true -q)'
 alias drmi_all='docker rmi -f $(docker images -q)'
+
+# Git
+alias mybranches="git for-each-ref --count=10 --sort=-committerdate refs/heads/ --format='%(refname:short)'"
+alias status='git status'
+function commit(){
+	git add --all;
+	git commit -m $1;
+}
+
+# Zsh
+alias me='source ~/.zshrc'
