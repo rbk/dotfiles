@@ -1,0 +1,5 @@
+# Docker
+alias dkill='docker kill $(docker ps -a -q)'
+alias dremove='docker rm $(docker ps -a -q)'
+alias dkill_all='docker rmi $(docker images -f dangling=true -q)'
+alias drmi_all='docker rmi -f $(docker images -q)'
